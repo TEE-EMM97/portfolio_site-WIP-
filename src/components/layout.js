@@ -5,42 +5,67 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Global, css } from "@emotion/core"
+import Context from "../store/context"
+import { useTheme } from "emotion-theming"
+import Hello from "./hello"
+import Toggle from "./toggle"
+import Container from "./container"
+import Background from './background'
+import Experience from './experience'
+import Skills from './skills'
+import "./layout.module.css"
 
-import Header from "./header"
-import "./layout.css"
+const Layout = () => {
+  const { state } = useContext(Context)
 
-const Layout = ({ children }) => {
+  const theme = useTheme()
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
+          description
         }
       }
     }
   `)
-
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
+    <div>
+      <Toggle siteTitle={data.site.siteMetadata.title} />
+      <Global
+        styles={css`
+          * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+          }
+
+          body {
+            background-color: ${state.isDark
+              ? theme.dark.background
+              : theme.light.background};
+
+            color: ${state.isDark ? theme.dark.font : theme.light.font};
+          }
+        `}
+      />
+      <Container>
+        <Hello siteDescription={data.site.siteMetadata.description} />
+        <Background />
+        <Experience />
+        <Skills />
         <footer>
-          © {new Date().getFullYear()}, Built with
+          ©tevonmccrea {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
-      </div>
-    </>
+      </Container>
+    </div>
   )
 }
 
