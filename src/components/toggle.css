@@ -71,4 +71,5 @@ input[type="checkbox"].checkbox + label {
   background: #fff;
   opacity: 0.9;
   background-color: cyan;
+  margin: 0;
 }

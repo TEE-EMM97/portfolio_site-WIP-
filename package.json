@@ -7,6 +7,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "bootstrap": "^4.5.0",
     "emotion-theming": "^10.0.27",
     "framer-motion": "^1.11.1",
     "gatsby": "^2.23.12",
@@ -14,7 +15,7 @@
     "gatsby-plugin-emotion": "^4.3.9",
     "gatsby-plugin-manifest": "^2.4.14",
     "gatsby-plugin-offline": "^3.2.13",
-    "gatsby-plugin-react-helmet": "^3.3.6",
+    "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sharp": "^2.6.14",
     "gatsby-remark-emojis": "^0.4.3",
     "gatsby-source-filesystem": "^2.3.14",

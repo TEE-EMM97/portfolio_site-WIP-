@@ -1,34 +1,42 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {motion} from "framer-motion"
-import './toggle.css'
+import styles from "./layout.module.css" 
 // import { Link } from "gatsby"
 
 const Hello = ({ siteDescription }) => {
+  const variants = {
+    rotate: [0, -25, 0, -25, 0]
+  }
   return (
-    <div style={{ maxWidth: "80%" }}>
-          <h1>
-            Hello!
-            <motion.div role="img" aria-label="hand-wave" class="emoji wave-hand animated" initial={{ y:0, x:0 }}
-            animate={{rotate: [0, -5, 0, -5, 0]}}
-            transition={{type: 'spring', duration: 5}}
-            >
-              👋
-            </motion.div>
-          </h1>
-
-
-      <h2>{siteDescription}</h2>
-      <h3 class="intro__contact">
+    <div className={styles.intro}>
+      <div className="d-flex flex-row">
+        <div style={{ fontSize: "2.5rem" }}>Hello!</div>
+        <motion.div
+          whileHover={variants}
+          animate={variants}
+          transition={{ type: "tween", stiffness: 100 }}
+          className=""
+          style={{ fontSize: "2.5rem", paddingLeft: 10 }}
+        >
+          <span role="img" aria-labelledby="waving">
+            👋
+          </span>
+        </motion.div>
+      </div>
+      <h2 style={{ marginTop: "11.3125rem", fontSize: "2.5rem" }}>
+        {siteDescription}
+      </h2>
+      <h3 style={{ marginTop: "11.3125rem", fontSize:'1.25rem' }}>
         <span>Get in touch </span>
-        <span class="emoji-point" aria-label="hand-point" role="img">
+        <span style={{paddingRight:10}}className="emoji-point" aria-label="hand-point" role="img">
           👉
         </span>
         <span>
           <a
             href="mailto:tevmcc@gmail.com"
             target="_blank"
-            class="highlight-link"
+            className="highlight-link"
             rel="noreferrer"
           >
             tevmcc@gmail.com

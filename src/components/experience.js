@@ -4,10 +4,10 @@ import JobData from "../../content/jobs.json"
 const Experience = () => {
   return (
     <div>
-      <section class="section experience">
-        <div class="section__title">Experience</div>
-        <div class="section__content">
-          <div class="jobs">
+      <section className="section experience">
+        <div className="section__title">Experience</div>
+        <div className="section__content">
+          <div className="jobs">
             <div>
               {JobData.jobs.map((data, index) => {
                 return <div key={`${index}`}>{data.company}</div>
@@ -30,7 +30,7 @@ const Experience = () => {
             </div>
           </div>
 
-          <a href="{{site.resume}}" target="_blank" class="arrow-link">
+          <a href="{{site.resume}}" target="_blank" className="arrow-link">
             View My Resume
           </a>
         </div>

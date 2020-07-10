@@ -10,6 +10,7 @@ import React from "react"
 import { ThemeProvider } from "emotion-theming"
 import GlobalStateProvider from "./src/store/GlobalStateProvider"
 import { theme } from "./src/theme/theme"
+import "bootstrap/dist/css/bootstrap.css"
 
 export const wrapRootElement = ({ element }) => (
   <GlobalStateProvider>

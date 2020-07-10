@@ -1,15 +1,15 @@
 import React from "react"
+import styles from "./layout.module.css" 
 
 const Background = () => {
   return (
-    <div>
-      <section class="section background">
-        <div class="section__title">Background</div>
-        <div class="section__content">
+      <div className={styles.background}>
+        <h3 className="">Background</h3>
+        <div className="">
           <p>
             I'm currently an Engineer at
             <a
-              class="underline-link"
+              className="underline-link"
               href="https://www.mmu.ac.uk"
               target="_blank"
               rel="noreferrer"
@@ -20,7 +20,7 @@ const Background = () => {
             lecturers, researchers and the wider community with some awesome
             people. I recently graduated from
             <a
-              class="underline-link"
+              className="underline-link"
               href="https://www.mmu.ac.uk"
               target="_blank"
               rel="noreferrer"
@@ -29,7 +29,7 @@ const Background = () => {
             </a>{" "}
             after completing three awesome six-month co-ops at
             <a
-              class="underline-link"
+              className="underline-link"
               href="https://us.mullenlowe.com/"
               target="_blank"
               rel="noreferrer"
@@ -38,7 +38,7 @@ const Background = () => {
             </a>
             ,
             <a
-              class="underline-link"
+              className="underline-link"
               href="https://starry.com/"
               target="_blank"
               rel="noreferrer"
@@ -47,7 +47,7 @@ const Background = () => {
             </a>
             , and
             <a
-              class="underline-link"
+              className="underline-link"
               href="https://www.apple.com/music/"
               target="_blank"
               rel="noreferrer"
@@ -71,8 +71,7 @@ const Background = () => {
             crossing off another item on my bucket list.
           </p>
         </div>
-      </section>
-    </div>
+      </div>
   )
 }
 

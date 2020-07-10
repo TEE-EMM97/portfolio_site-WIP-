@@ -1,7 +1,7 @@
 module.exports = {
   siteTitle: "Tevon McCrea | Front-End Developer",
   siteDescription:
-    "Tevon McCrea, a design-minded front-end software engineer focused on building beautiful interfaces & experiences",
+    "Tevon McCrea, a design-focused front-end software engineer fixated on building beautiful interfaces & experiences",
   siteKeywords:
     "tevon mccrea, tevon, mccrea, tee-emm97, front-end engineer, web developer, javascript, northwest",
   siteUrl: "https://tm97.com",
