@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/TEE-EMM97/portfolio_site",
+  "success_url": "/",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-static"
+    }
+  ]
+}
