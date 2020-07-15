@@ -1,11 +1,14 @@
 import React from "react"
-import styles from "./layout.module.css" 
+import styles from "./layout.module.css"
+import Fade from "react-reveal/Fade"
 
 const Background = () => {
+
   return (
-      <div className={styles.background}>
-        <h3 className="">Background</h3>
-        <div className="">
+    <div className="d-flex flex-row">
+      <Fade>
+        <div className={styles.title}>Background</div>
+        <div className={styles.content}>
           <p>
             I'm currently an Engineer at
             <a
@@ -71,7 +74,8 @@ const Background = () => {
             crossing off another item on my bucket list.
           </p>
         </div>
-      </div>
+      </Fade>
+    </div>
   )
 }
 
