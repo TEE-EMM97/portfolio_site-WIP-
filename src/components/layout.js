@@ -17,6 +17,7 @@ import Container from "./container"
 import Background from './background'
 import Experience from './experience'
 import Skills from './skills'
+import Footer from './footer'
 import "./layout.module.css"
 
 const Layout = () => {
@@ -59,11 +60,7 @@ const Layout = () => {
         <Background />
         <Experience />
         <Skills />
-        <footer>
-          ©tevonmccrea {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer />
       </Container>
     </div>
   )

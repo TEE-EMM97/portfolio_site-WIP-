@@ -18,7 +18,7 @@ const Background = () => {
               rel="noreferrer"
             >
               Manchester Metropolitan University
-            </a>{" "}
+            </a>
             We survive by offering our services and experience to students,
             lecturers, researchers and the wider community with some awesome
             people. I recently graduated from
@@ -29,7 +29,7 @@ const Background = () => {
               rel="noreferrer"
             >
               Manchester Metropolitan University
-            </a>{" "}
+            </a>
             after completing three awesome six-month co-ops at
             <a
               className="underline-link"
