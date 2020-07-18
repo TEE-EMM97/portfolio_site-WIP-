@@ -12,7 +12,7 @@
 
 - [ ] Webpack
 
-- [ ] ES2015
+- [x] ES2015
 
 - [x] Sass/SCSS
 
