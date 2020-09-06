@@ -3,9 +3,8 @@ import styles from "./layout.module.css"
 import Fade from "react-reveal/Fade"
 
 const Background = () => {
-
   return (
-    <div className="d-flex flex-row">
+    <div className="d-flex flex-row pb-5">
       <Fade>
         <div className={styles.title}>Background</div>
         <div className={styles.content}>
