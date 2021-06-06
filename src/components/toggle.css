@@ -39,10 +39,10 @@
 
 input[type="checkbox"].checkbox {
   width: 40px;
-  height: 10px;
-  background: #555;
+  height: 18px;
+  background: #FBC02D;
   position: relative;
-  border-radius: 5px;
+  border-radius: 37px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -51,8 +51,14 @@ input[type="checkbox"].checkbox {
   outline: none;
 }
 
+
+input[type="checkbox"].checkbox:checked {
+  background: rgb(61, 52, 119);
+}
+
 input[type="checkbox"].checkbox:checked + label {
-  left: 30px;
+  left: 26px;
+  background-color: slateblue;
 }
 
 input[type="checkbox"].checkbox:focus-visible {
@@ -67,9 +73,9 @@ input[type="checkbox"].checkbox + label {
   transition: all 0.3s ease;
   cursor: pointer;
   position: absolute;
-  left: 2px;
+  left: 4px;
   background: #fff;
   opacity: 0.9;
-  background-color: cyan;
+  background-color: #FFEB3B;
   margin: 0;
 }

@@ -1,14 +1,14 @@
 module.exports = {
-  siteTitle: "Tevon McCrea | Front-End Developer",
+  siteTitle: "@tm97 | Front-End Developer",
   siteDescription:
-    "I am Tevon McCrea, a design-focused front-end software engineer fixated on building beautiful interfaces & experiences",
+    "My name is Tevon, I help developers, designers, and SME's bring their ideas to life. I turn your briefs into ecommerce-ified websites; on time, and on budget. Powered by Figma, VS Code and Supermalt,",
   siteKeywords:
-    "tevon mccrea, tevon, mccrea, tee-emm97, front-end engineer, web developer, javascript, northwest",
+    "tevon, tevon, tee-emm97, front-end engineer, web developer, javascript, northwest, manchester, ibethatlo",
   siteUrl: "https://tm97.com",
   siteLanguage: "en_UK",
   //   googleAnalyticsID: "UA-45666519-2",
   //   googleVerification: "DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk",
-  name: "Tevon McCrea",
+  name: "Tevon",
   location: "Manchester, UK",
   email: "tevmcc@gmail.com",
   github: "https://github.com/tee-emm97",

@@ -1,0 +1,223 @@
+@import "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap";
+
+html {
+  font-family: "Nunito", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Nunito", sans-serif;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+
+  .section__title {
+    flex-shrink: 0;
+    width: 200px;
+    margin-right: 70px;
+    text-align: right;
+    font-weight: 700;
+    letter-spacing: 2px
+  }
+
+  .section__content {
+    width: 100%;
+    max-width: 650px;
+    font-size: 1rem;
+  }
+
+  .skills {
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+
+    .skills__type--header {
+      padding-top: 10px;
+      font-weight: 700;
+    }
+  }
+
+  .position {
+    padding-right: 1.5rem;
+  }
+
+  .place-time {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+.intro {
+  font-size: 2.5rem;
+  max-width: 1440px;
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-evenly;
+  padding: 100px 170px;
+}
+
+// .skills {
+//   height: 25vh;
+//   display: flex;
+// }
+
+// .skills_content{
+//   display: flex;
+// }
+
+// .skill_type {
+//   flex-shrink: 0;
+//   text-align: left;
+//   width: 200px;
+//   font-weight: 700;
+// }
+
+.emailStyle a {
+  border-bottom: 3px solid black;
+  text-decoration: none;
+  padding-bottom: 1px;
+}
+
+.emailStyle a:hover {
+  background: #000;
+  transition: ease-in 0.2s;
+  color: #fff;
+}
+
+
+.content {
+  width: 100%;
+  max-width: 650px;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+}
+
+@media only screen and (max-width: 1024px) {
+  .intro {
+    padding: 140px;
+  }
+}
+
+
+@media only screen and (max-width: 960px) {
+  .intro {
+    padding: 128px;
+  }
+
+    .section {
+      display: flex;
+      justify-content: center;
+
+      .section__title {
+        margin-right: 50px;
+      }
+    }
+}
+
+@media screen and (max-width:850px) {
+  .intro {
+    padding: 122px;
+  }
+    .section {
+      display: flex;
+      justify-content: center;
+
+      .section__title {
+        margin-right: 40px;
+      }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+  .intro {
+    padding: 50px;
+  }
+
+  .xp {
+    height: 35vh;
+  }
+
+  .section {
+    display: flex;
+    justify-content: center;
+
+    .section__content {
+      padding-top: 30px;
+      padding-left: 30px;
+    }
+
+    .section__title {
+      text-align: left;
+      width: auto;
+      margin-right:20px;
+    }
+
+
+
+    .jobs {
+      position: relative;
+      right: 70px;
+      top: 30px;
+    }
+
+    .place-time {
+      flex-direction: column;
+    }
+
+    .skills {
+    height: 35vh;
+    flex-wrap:wrap;
+
+    .skills__type--header {
+      padding-top: 0px;
+    }
+  }
+
+  .position {
+    padding: 0;
+  }
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .section {
+    display: flex;
+    justify-content: center;
+
+    .section__title {
+      margin-right:0px;
+    }
+
+    .section__content {
+      padding-left: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 100%;
+  }
+}

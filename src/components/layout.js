@@ -14,11 +14,10 @@ import { useTheme } from "emotion-theming"
 import Hello from "./hello"
 import Toggle from "./toggle"
 import Container from "./container"
-import Background from './background'
 import Experience from './experience'
 import Skills from './skills'
 import Footer from './footer'
-import "./layout.module.css"
+import "./layout.scss"
 
 const Layout = () => {
   const { state } = useContext(Context)
@@ -57,9 +56,8 @@ const Layout = () => {
       />
       <Container>
         <Hello siteDescription={data.site.siteMetadata.description} />
-        <Background />
-        <Experience />
         <Skills />
+        <Experience />
         <Footer />
       </Container>
     </div>

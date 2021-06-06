@@ -10,8 +10,7 @@ const Footer = () => {
             <span>Developed by</span>
           </div>
           <div className="bottom">
-            <span>Tevon McCrea</span>
-            <span>{new Date().getFullYear()}</span>
+            <span>Tevon {new Date().getFullYear()} &copy;</span>
           </div>
         </div>
         <div className="d-flex flex-row justify-content-end align-items-end ml-auto">
