@@ -13,7 +13,7 @@ const Hello = ({ siteDescription}) => {
   return (
     <div className="intro">
       <Fade>
-      <div className="d-flex flex-row">
+      <div className="intro__hello">
         <div style={{ fontSize: "2.5rem" }}>Hello!</div>
         <motion.div
           whileHover={variants}
@@ -30,7 +30,7 @@ const Hello = ({ siteDescription}) => {
         {siteDescription}
       </h2>
       <div
-        className="d-flex flex-row"
+        className="intro__touch"
         style={{
           fontSize: "1.25rem",
         }}

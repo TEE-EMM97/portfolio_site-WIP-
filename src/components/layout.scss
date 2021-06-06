@@ -23,6 +23,8 @@ h1 {
   margin: 0.67em 0;
 }
 
+
+
 .section {
   display: flex;
   justify-content: center;
@@ -67,29 +69,27 @@ h1 {
 .intro {
   font-size: 2.5rem;
   max-width: 1440px;
-  height: 98vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-self: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  margin: 0 auto;
   padding: 100px 170px;
+
+  .intro__hello {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .intro__touch {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
-// .skills {
-//   height: 25vh;
-//   display: flex;
-// }
-
-// .skills_content{
-//   display: flex;
-// }
-
-// .skill_type {
-//   flex-shrink: 0;
-//   text-align: left;
-//   width: 200px;
-//   font-weight: 700;
-// }
+.xp {
+  height: 30vh;
+}
 
 .emailStyle a {
   border-bottom: 3px solid black;
@@ -118,36 +118,67 @@ footer {
   .intro {
     padding: 140px;
   }
-}
 
-
-@media only screen and (max-width: 960px) {
-  .intro {
-    padding: 128px;
+  .xp {
+    height: 60vh;
   }
 
-    .section {
-      display: flex;
-      justify-content: center;
-
-      .section__title {
-        margin-right: 50px;
-      }
+  .section__content {
+    .jobs {
+      padding-top: 10px;
     }
+
+    .skills {
+      height: 35vh;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media only screen and (max-width: 896px) {
+  .intro {
+    padding:120px;
+    height: 65rem;
+  }
+
+  .xp {
+    height:40rem
+  }
+
+  .section__content {
+    .skills {
+      height: 20rem;
+      padding-right: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+
+
+  .section {
+    display: flex;
+    justify-content: center;
+
+    .section__title {
+      margin-right: 50px;
+    }
+  }
 }
 
 @media screen and (max-width:850px) {
   .intro {
     padding: 122px;
   }
-    .section {
-      display: flex;
-      justify-content: center;
 
-      .section__title {
-        margin-right: 40px;
-      }
+  .section {
+    display: flex;
+    justify-content: center;
+
+    .section__title {
+      margin-right: 40px;
     }
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -156,7 +187,7 @@ footer {
   }
 
   .xp {
-    height: 35vh;
+    height: 60vh;
   }
 
   .section {
@@ -171,53 +202,94 @@ footer {
     .section__title {
       text-align: left;
       width: auto;
-      margin-right:20px;
+      margin-right: 20px;
+    }
+    .skills {
+      height: 35vh;
+      flex-wrap: wrap;
+
+      .skills__type--header {
+        padding-top: 0px;
+      }
     }
 
+    .position {
+      padding: 0;
+    }
+  }
+}
 
+@media only screen and (max-width: 667px) {
+  .xp {
+    height: 40rem;
+  }
+  .section {
+    .skills {
+      height: 15rem;
+      flex-wrap: wrap;
+
+      .skills__type--header {
+        padding-top: 0px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .intro {
+    padding: 0;
+  }
+
+  .xp {
+    height:60rem
+  }
+
+  .section {
+    .section__title {
+      margin-right: 0px;
+    }
+
+    .skills {
+      height: 30rem;
+      padding-right: 30px;
+    }
 
     .jobs {
       position: relative;
-      right: 70px;
+      right: 79px;
       top: 30px;
     }
 
     .place-time {
       flex-direction: column;
     }
-
-    .skills {
-    height: 35vh;
-    flex-wrap:wrap;
-
-    .skills__type--header {
-      padding-top: 0px;
-    }
   }
+}
 
-  .position {
+
+@media only screen and (max-width: 375px) {
+  .intro {
     padding: 0;
   }
-  }
-}
 
-@media only screen and (max-width: 570px) {
   .section {
-    display: flex;
-    justify-content: center;
-
     .section__title {
-      margin-right:0px;
+      margin-right: 0px;
     }
 
-    .section__content {
-      padding-left: 50px;
+    .skills {
+      height: 60rem;
+      padding-right: 60px;
     }
-  }
-}
 
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
+    .jobs {
+      position: relative;
+      right: 79px;
+      top: 30px;
+    }
+
+    .place-time {
+      flex-direction: column;
+    }
   }
 }
