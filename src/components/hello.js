@@ -13,45 +13,38 @@ const Hello = ({ siteDescription}) => {
   return (
     <div className="intro">
       <Fade>
-      <div className="intro__hello">
-        <div style={{ fontSize: "2.5rem" }}>Hello!</div>
-        <motion.div
-          whileHover={variants}
-          animate={variants}
-          transition={{ type: "tween", stiffness: 100 }}
-          style={{ fontSize: "2.5rem", paddingLeft: 10 }}
-        >
-          <span role="img" aria-labelledby="waving">
-            👋
+        <div className="intro__hello">
+          <h2>Hello!</h2>
+          <motion.div
+            whileHover={variants}
+            animate={variants}
+            transition={{ type: "tween", stiffness: 100 }}
+            style={{ paddingLeft: 10, lineHeight: '38px'}}
+          >
+            <span role="img" aria-labelledby="waving">
+              👋
+            </span>
+          </motion.div>
+        </div>
+        <p className="intro__para">{siteDescription}</p>
+        <div className="intro__touch">
+            <p>Get in touch!</p>
+          <motion.span
+            whileHover={variants}
+            animate={variants}
+            transition={{ type: "tween", stiffness: 100 }}
+            style={{ paddingLeft: 12, paddingRight: 12, lineHeight: '30px' }}
+          >
+            <span role="img" aria-labelledby="pointer">
+              👉
+            </span>
+          </motion.span>
+          <span className="emailStyle">
+            <a href="mailto:tevmcc@gmail.com" target="_blank" rel="noreferrer">
+              tevmcc@gmail.com
+            </a>
           </span>
-        </motion.div>
-      </div>
-      <h2 style={{fontSize: "2.5rem" }}>
-        {siteDescription}
-      </h2>
-      <div
-        className="intro__touch"
-        style={{
-          fontSize: "1.25rem",
-        }}
-      >
-        <div><p>Get in touch!</p></div>
-        <motion.span
-          whileHover={variants}
-          animate={variants}
-          transition={{ type: "tween", stiffness: 100 }}
-          style={{ paddingLeft: 12, paddingRight: 12 }}
-        >
-          <span role="img" aria-labelledby="pointer">
-            👉
-          </span>
-        </motion.span>
-        <span className="emailStyle">
-          <a href="mailto:tevmcc@gmail.com" target="_blank" rel="noreferrer">
-            tevmcc@gmail.com
-          </a>
-        </span>
-      </div>
+        </div>
       </Fade>
     </div>
   )
