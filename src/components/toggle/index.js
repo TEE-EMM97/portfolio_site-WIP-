@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import React, { useContext } from "react"
-import Context from "../store/context"
+import Context from "../../store/context"
 import { useTheme } from "emotion-theming"
 import "./toggle.css"
 // import { Link } from "gatsby"

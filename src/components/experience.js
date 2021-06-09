@@ -1,7 +1,7 @@
 import React from "react"
 import JobData from "../../content/jobs.json"
 import Fade from "react-reveal/Fade"
-import "./layout.scss"
+import  "./layout/layout.scss"
 
 const Experience = () => {
   return (

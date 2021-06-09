@@ -7,36 +7,21 @@
 
 import React, { useContext } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import { Global, css } from "@emotion/core"
-import Context from "../store/context"
+import Context from "../../store/context"
 import { useTheme } from "emotion-theming"
-import Hello from "./hello"
-import Toggle from "./toggle"
-import Container from "./container"
-import Experience from './experience'
-import Skills from './skills'
-import Footer from './footer'
+import Toggle from "../toggle"
+import Footer from "./footer/index"
 import "./layout.scss"
 
-const Layout = () => {
+const Layout = ({ children }) => {
   const { state } = useContext(Context)
 
   const theme = useTheme()
 
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          description
-        }
-      }
-    }
-  `)
   return (
     <div>
-      <Toggle siteTitle={data.site.siteMetadata.title} />
+      <Toggle/>
       <Global
         styles={css`
           * {
@@ -54,12 +39,10 @@ const Layout = () => {
           }
         `}
       />
-      <Container>
-        <Hello siteDescription={data.site.siteMetadata.description} />
-        <Skills />
-        <Experience />
+      <div className="content">
+        {children}
         <Footer />
-      </Container>
+      </div>
     </div>
   )
 }

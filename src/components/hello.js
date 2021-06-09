@@ -2,7 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import {motion} from "framer-motion"
 import Fade from "react-reveal/Fade"
-import "./layout.scss" 
+import { Link } from 'gatsby';
+import  "./layout/layout.scss"
 // import { Link } from "gatsby"
 
 const Hello = ({ siteDescription}) => {
@@ -28,7 +29,7 @@ const Hello = ({ siteDescription}) => {
         </div>
         <p className="intro__para">{siteDescription}</p>
         <div className="intro__touch">
-            <p>Get in touch!</p>
+            <p>Check my blog</p>
           <motion.span
             whileHover={variants}
             animate={variants}
@@ -40,9 +41,9 @@ const Hello = ({ siteDescription}) => {
             </span>
           </motion.span>
           <span className="emailStyle">
-            <a href="mailto:tevmcc@gmail.com" target="_blank" rel="noreferrer">
+            <Link to='/blog/'>
               tevmcc@gmail.com
-            </a>
+            </Link>
           </span>
         </div>
       </Fade>

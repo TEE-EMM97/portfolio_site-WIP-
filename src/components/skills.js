@@ -1,7 +1,7 @@
 import React from "react"
 import SkillData from "../../content/skills.json"
 import Fade from "react-reveal/Fade"
-import  "./layout.scss"
+import  "./layout/layout.scss"
 
 const Skills = () => {
   return (

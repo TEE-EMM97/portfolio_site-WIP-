@@ -23,6 +23,14 @@ h1 {
   margin: 0.67em 0;
 }
 
+.content {
+  max-width: 1060px !important;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: left;
+}
+
 .scroll-top-button {
   position: fixed; 
   width: 100%;

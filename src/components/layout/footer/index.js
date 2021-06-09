@@ -1,5 +1,5 @@
 import React from "react"
-import socialData from "../../content/socials.json"
+import socialData from "../../../../content/socials.json"
 
 const Footer = () => {
   return (

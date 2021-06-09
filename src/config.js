@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: "@tm97 | Front-End Developer",
+  siteTitle: "@tm97",
   siteDescription:
     "My name is Tevon, I help developers, designers, and SME's bring their ideas to life. I turn your briefs into ecommerce-ified websites; on time, and on budget. Powered by Figma, VS Code and Supermalt,",
   siteKeywords:
