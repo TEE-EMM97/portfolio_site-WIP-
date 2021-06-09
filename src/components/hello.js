@@ -42,7 +42,7 @@ const Hello = ({ siteDescription}) => {
           </motion.span>
           <span className="emailStyle">
             <Link to='/blog/'>
-              tevmcc@gmail.com
+              Blog
             </Link>
           </span>
         </div>
