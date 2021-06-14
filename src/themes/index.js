@@ -1,3 +1,4 @@
+// Color choices for light and dark mode.
 export const theme = {
   light: {
     font: "#333",

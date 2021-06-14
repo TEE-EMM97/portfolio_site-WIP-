@@ -1,5 +1,5 @@
-const config = require("./src/config")
-const dotenv = require('dotenv')
+const config = require('./src/config');
+const dotenv = require('dotenv');
 
 if (process.env.NODE_ENV !== 'production') {
   dotenv.config()
@@ -12,33 +12,10 @@ module.exports = {
     author: config.name,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-contentful',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `2ua5kfbtpiwt`,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       },
     },
@@ -53,33 +30,20 @@ module.exports = {
         plugins: [],
       },
     },
+    'gatsby-plugin-sass',
+    'gatsby-plugin-gatsby-cloud',
+    'gatsby-plugin-image',
+    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-emotion`,
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
-      resolve: "gatsby-remark-emojis",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        // Deactivate the plugin globally (default: true)
-        active: true,
-        // Add a custom css class
-        class: "emoji-icon",
-        class: "emoji-100",
-        // In order to avoid pattern mismatch you can specify
-        // an escape character which will be prepended to the
-        // actual pattern (e.g. `#:poop:`).
-        escapeCharacter: "#", // (default: '')
-        // Select the size (available size: 16, 24, 32, 64)
-        size: 64,
-        // Add custom styles
-        styles: {
-          display: "inline",
-          margin: "0",
-          "margin-top": "1px",
-          position: "relative",
-          top: "5px",
-          width: "25px",
-        },
+        name: 'pages',
+        path: './src/pages/',
       },
-    },`gatsby-plugin-emotion`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+      __key: 'pages',
+    },
   ],
-}
+};

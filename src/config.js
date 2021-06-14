@@ -1,3 +1,4 @@
+// Meta Tag & Social media Information
 module.exports = {
   siteTitle: "@tm97",
   siteDescription:
@@ -27,28 +28,77 @@ module.exports = {
       url: "https://twitter.com/ibethatlo",
     },
   ],
-
-  //   navHeight: 100,
-
-  //   colors: {
-  //     green: "#64ffda",
-  //     navy: "#0a192f",
-  //     darkNavy: "#020c1b",
-  //   },
-
-  //   srConfig: (delay = 200) => ({
-  //     origin: "bottom",
-  //     distance: "20px",
-  //     duration: 500,
-  //     delay,
-  //     rotate: { x: 0, y: 0, z: 0 },
-  //     opacity: 0,
-  //     scale: 1,
-  //     easing: "cubic-bezier(0.645, 0.045, 0.355, 1)",
-  //     mobile: true,
-  //     reset: false,
-  //     useDelay: "always",
-  //     viewFactor: 0.25,
-  //     viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-  //   }),
+  skills: {
+  languages: [
+    {
+      "item": "HTML"
+    },
+    {
+      "item": "CSS/SCSS"
+    },
+    {
+      "item": "JavaScript"
+    },
+    {
+      "item": "SQL"
+    },
+    {
+      "item": "Swift"
+    }
+  ],
+    frameworks: [
+      {
+        "item": "ReactJS"
+      },
+      {
+        "item": "Bootstrap"
+      },
+      {
+        "item": "AngularJS"
+      },
+      {
+        "item": "Gatsby"
+      },
+      {
+        "item": "Ionic"
+      },
+      {
+        "item": "React-Native"
+      }
+    ],
+      tools: [
+        {
+          "item": "Bash"
+        },
+        {
+          "item": "Git & Github"
+        },
+        {
+          "item": "Gulp"
+        },
+        {
+          "item": "Chrome Devtools"
+        },
+        {
+          "item": "MongoDB"
+        },
+        {
+          "item": "Postico"
+        }
+      ],
+        design: [
+          {
+            "item": "SketchApp"
+          },
+          {
+            "item": "Figma"
+          },
+          {
+            "item": "Invision"
+          },
+          {
+            "item": "Wireframing"
+          }
+        ]
+  }
 }

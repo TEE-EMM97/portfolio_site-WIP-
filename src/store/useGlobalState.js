@@ -1,6 +1,7 @@
 import { useReducer } from "react"
 import storage from "local-storage-fallback"
 
+// State changer for website theme 
 const reducer = (state, action) => {
   switch (action.type) {
     case "TOGGLE_DARK":
@@ -15,6 +16,7 @@ const reducer = (state, action) => {
 }
 
 const useGlobalState = () => {
+  // Saves theme change to local storage allowing to keep state either light or dark on refresh.
   const [state, dispatch] = useReducer(reducer, {
     isDark: storage.getItem("isDark")
       ? JSON.parse(storage.getItem("isDark"))

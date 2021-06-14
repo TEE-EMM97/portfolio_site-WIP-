@@ -4,29 +4,28 @@ import Hello from "../components/hello"
 import Experience from '../components/experience'
 import Skills from '../components/skills'
 import { useStaticQuery, graphql } from "gatsby"
-import SEO from "../components/seo"
-// import Image from "../components/image"
+import Seo from "../components/seo"
 
-const IndexPage = () => {
+// markup
+const Home = () => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          description
-        }
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        title
+        description
       }
     }
-  `)
-
+  }
+`)
   return (
-    <Layout>    
-      <SEO siteTitle={data.site.siteMetadata.title} title="Home"/>
+    <Layout>
+      <Seo siteTitle={data.site.siteMetadata.title} title="Home" />
       <Hello siteDescription={data.site.siteMetadata.description} />
-        <Skills />
-        <Experience />
+      <Skills />
+      <Experience/>
     </Layout>
   )
 }
 
-export default IndexPage;
+export default Home;

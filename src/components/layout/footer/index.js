@@ -1,5 +1,6 @@
-import React from "react"
-import socialData from "../../../../content/socials.json"
+import React from 'react'
+import socialData from '../../../config'
+
 
 const Footer = () => {
   return (
@@ -7,10 +8,10 @@ const Footer = () => {
       <footer className="w-100 d-flex pb-3">
         <div className="footer__copyright">
           <div className="top">
-            <span>Developed by</span>
+            <span>Developed By</span>
           </div>
           <div className="bottom">
-            <span>Tevon {new Date().getFullYear()} &copy;</span>
+            <span>Tevon {new Date().getFullYear()} &copy; </span>
           </div>
         </div>
         <div className="d-flex flex-row justify-content-end align-items-end ml-auto">
@@ -23,7 +24,7 @@ const Footer = () => {
               </li>
             )
           })}
-        </div>
+         </div>
       </footer>
     </div>
   )
