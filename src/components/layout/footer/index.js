@@ -1,8 +1,8 @@
-import React from 'react'
-import socialData from '../../../config'
-
+import React from 'react';
+import socialData from '../../../config';
 
 const Footer = () => {
+  let tempUrlForName = socialData.socialMedia[2].url;
   return (
     <div>
       <footer className="w-100 d-flex pb-3">
@@ -11,7 +11,12 @@ const Footer = () => {
             <span>Developed By</span>
           </div>
           <div className="bottom">
-            <span>Tevon {new Date().getFullYear()} &copy; </span>
+            <a href={tempUrlForName}>Tevon </a>
+            {new Date().getFullYear()}
+            <span role="img" aria-labelledby="rock-fingers">
+              🤘🏾
+            </span>
+            &copy;
           </div>
         </div>
         <div className="d-flex flex-row justify-content-end align-items-end ml-auto">
@@ -22,12 +27,12 @@ const Footer = () => {
                   {data.name}
                 </a>
               </li>
-            )
+            );
           })}
-         </div>
+        </div>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

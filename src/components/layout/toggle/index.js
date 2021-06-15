@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { useContext } from 'react'
-import Context from '../../store/context'
+import Context from '../../../store/context'
 import { useTheme } from '@emotion/react'
 import './toggle.scss'
 
@@ -15,6 +15,8 @@ const Toggle = ({siteTitle}) => {
         </span>
         <span className="toggle">
           <input type="checkbox" name="checkbox" id="checkbox" className="checkbox" onChange={() => dispatch({ type: 'TOGGLE_DARK' })} checked={state.isDark} />
+          {/* Below comment removes jsx label warning  */}
+          <>{ /* eslint-disable-next-line jsx-a11y/label-has-associated-control */}</>
           <label htmlFor="checkbox"></label>
         </span>
         <span

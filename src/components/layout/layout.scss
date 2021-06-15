@@ -61,6 +61,7 @@ h1 {
     max-width: 650px;
     font-size: 1rem;
   }
+  
 
   .skills {
     height: 25vh;
@@ -115,6 +116,9 @@ h1 {
 
 .xp {
   height: 40rem;
+  .xp__content {
+    padding-top: 100px;
+  }
 }
 
 .emailStyle {

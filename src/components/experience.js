@@ -10,7 +10,8 @@ const Experience = () => {
         <div className="section__title">
           <h3>Experience</h3>
         </div>
-        <section className="section__content">
+        <div className="section__content">
+          <div className="xp__content">
         {JobData.jobs.map((data, index) => {
           return (
               <div className="jobs">
@@ -30,8 +31,9 @@ const Experience = () => {
                 </div>
               </div>
           )
-        })}
-        </section>
+        })} 
+          </div>
+        </div>
         {/* <a href="{{site.resume}}" target="_blank" className="arrow-link">
           View My Resume
         </a> */}

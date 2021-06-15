@@ -2,7 +2,7 @@
 module.exports = {
   siteTitle: "@tm97",
   siteDescription:
-    "My name is Tevon, I help developers, designers, and SME's bring their ideas to life. I turn your briefs into ecommerce-ified websites; on time, and on budget. Powered by Figma, VS Code and Supermalt,",
+    "My name is Tev, I help developers, designers, and SME's bring their ideas to life; on time, and on budget. Powered by VS Code, Figma, and Supermalt.",
   siteKeywords:
     "tevon, tevon, tee-emm97, front-end engineer, web developer, javascript, northwest, manchester, ibethatlo",
   siteUrl: "https://tm97.com",
