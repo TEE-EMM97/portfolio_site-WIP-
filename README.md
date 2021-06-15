@@ -10,7 +10,11 @@
 
 [GatsbyJS](https://www.gatsbyjs.com/) is a free and open source static website builder build on React. It's one implementation of the [JAMstack](https://jamstack.org/) idea which creates high speed webpages.
 
-This is a clean , minimal, and responsive starter for creating portfolios or blogs with Gatsby.
+This is a clean, minimal, and responsive starter for creating portfolios or blogs with Gatsby.
+
+## Prerequisites
+
+- [Gatsby CLI](https://www.gatsbyjs.com/docs/tutorial/part-zero/#using-the-gatsby-cli)
 
 ##  Portfolio Features
 
@@ -50,7 +54,7 @@ This is a clean , minimal, and responsive starter for creating portfolios or blo
 
 https://tm97.gatsbyjs.io
 
-![portfoliogiphy](/Users/tm97/Documents/GitHub.nosync/portfolio_site-WIP-/src/images/portfoliogiphy.webp)
+![portfoliogiphy](https://raw.githubusercontent.com/TEE-EMM97/portfolio_site-WIP-/master/src/images/portfoliogiphy.webp)
 
 
 
