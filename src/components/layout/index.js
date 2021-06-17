@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Global, css } from '@emotion/react';
 import Context from '../../store/context';
 import { useTheme } from '@emotion/react';
-import Toggle from './toggle';
+import NavMenu from './NavMenu'
 import Footer from './footer/index';
 import './layout.scss';
 const Layout = ({ children }) => {
@@ -12,7 +12,6 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <Toggle />
       <Global
         styles={css`
           * {
@@ -28,8 +27,21 @@ const Layout = ({ children }) => {
 
             color: ${state.isDark ? theme.dark.font : theme.light.font};
           }
+
+          .menu-icon {
+            background: ${state.isDark ? theme.dark.div : theme.light.div}
+          }
+
+          .menu-list {
+            background: ${state.isDark ? theme.dark.menuListBg : theme.light.menuListBg};
+            height: 100%;
+           a {
+            color: ${state.isDark ? theme.dark.font : theme.light.font};
+           }
+          }
         `}
       />
+      <NavMenu />
       <div className="content">
         {children}
         <Footer />

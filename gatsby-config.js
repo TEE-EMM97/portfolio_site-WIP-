@@ -5,6 +5,8 @@ if (process.env.NODE_ENV !== 'production') {
   dotenv.config()
 }
 
+const { githubApiQuery } = require('./github-api')
+
 module.exports = {
   siteMetadata: {
     title: config.siteTitle,
@@ -13,7 +15,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-source-contentful',
+      resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
@@ -30,20 +32,42 @@ module.exports = {
         plugins: [],
       },
     },
-    'gatsby-plugin-sass',
-    'gatsby-plugin-gatsby-cloud',
-    'gatsby-plugin-image',
-    'gatsby-plugin-react-helmet',
-    `gatsby-plugin-emotion`,
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-github-api`,
       options: {
-        name: 'pages',
-        path: './src/pages/',
+        // url: API URL to use. Defaults to  https://api.github.com/graphql
+        url: 'https://api.github.com/graphql',
+  
+        // token: required by the GitHub API
+        token: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
+  
+        // GraphQLquery: defaults to a search query
+        graphQLQuery: githubApiQuery,
+  
+        // variables: defaults to variables needed for a search query
+        variables: process.env.GITHUB_LOGIN
+      }
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      }
+    },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `./src/pages/`,
       },
-      __key: 'pages',
+      __key: `pages`,
     },
   ],
 };
