@@ -35,8 +35,7 @@ module.exports = {
     {
       resolve: `gatsby-source-github-api`,
       options: {
-        // url: API URL to use. Defaults to  https://api.github.com/graphql
-        url: 'https://api.github.com/graphql',
+        url: "https://api.github.com/graphql", // default Github GraphQL v4 API endpoint
   
         // token: required by the GitHub API
         token: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
@@ -45,7 +44,9 @@ module.exports = {
         graphQLQuery: githubApiQuery,
   
         // variables: defaults to variables needed for a search query
-        variables: process.env.GITHUB_LOGIN
+        variables: {
+          github_login: process.env.GITHUB_LOGIN
+        }
       }
     },
     {

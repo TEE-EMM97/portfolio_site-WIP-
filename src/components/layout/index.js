@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Global, css } from '@emotion/react';
 import Context from '../../store/context';
 import { useTheme } from '@emotion/react';
-import NavMenu from './NavMenu'
+import NavMenu from './NavMenu';
 import Footer from './footer/index';
 import './layout.scss';
 const Layout = ({ children }) => {
@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
   const theme = useTheme();
 
   return (
-    <div>
+    <>
       <Global
         styles={css`
           * {
@@ -29,24 +29,28 @@ const Layout = ({ children }) => {
           }
 
           .menu-icon {
-            background: ${state.isDark ? theme.dark.div : theme.light.div}
+            background: ${state.isDark ? theme.dark.div : theme.light.div};
           }
 
           .menu-list {
-            background: ${state.isDark ? theme.dark.menuListBg : theme.light.menuListBg};
+            background: ${state.isDark
+              ? theme.dark.menuListBg
+              : theme.light.menuListBg};
             height: 100%;
-           a {
-            color: ${state.isDark ? theme.dark.font : theme.light.font};
-           }
+            a {
+              color: ${state.isDark ? theme.dark.font : theme.light.font};
+            }
           }
         `}
       />
-      <NavMenu />
-      <div className="content">
-        {children}
-        <Footer />
+      <div className="stick-foot">
+        <NavMenu />
+        <div className="content">
+          {children}
+        </div>
+          <Footer />
       </div>
-    </div>
+    </>
   );
 };
 

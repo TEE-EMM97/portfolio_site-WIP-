@@ -2,7 +2,6 @@ import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
-import '../components/layout/layout.scss';
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
