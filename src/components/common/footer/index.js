@@ -1,5 +1,6 @@
 import React from 'react';
 import socialData from '../../../config';
+import './footer.scss'
 
 const Footer = () => {
   let tempUrlForName = socialData.socialMedia[2].url;
@@ -7,10 +8,10 @@ const Footer = () => {
     <footer>
       <div className="footer__copyright">
         <div className="top">
-          <span>Developed By</span>
+          <span>Built with GatsbyJS by</span>
         </div>
         <div className="bottom">
-          <a href={tempUrlForName}>Tevon</a>
+          <a href={tempUrlForName}>myself💘</a>
           <span> {new Date().getFullYear()}</span>
           <span role="img" aria-labelledby="rock-fingers">
             🤘🏾

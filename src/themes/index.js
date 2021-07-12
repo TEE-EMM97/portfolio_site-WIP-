@@ -12,4 +12,8 @@ export const theme = {
     div: '#fff',
     menuListBg: '#000'
   },
+  scrollLock: {
+    unlocked: 'scroll',
+    locked: 'hidden'
+  }
 }

@@ -14,13 +14,14 @@
 position: relative;
 padding: 0 4px;
 display: flex;
-align-items: center;
+align-items:center;
+z-index: 99999;
 }
 
 .toggle-container {
 display: flex;
 justify-content: flex-end;
-margin: 0 auto;
+margin-left:auto
 }
 
 .toggle-container > span {

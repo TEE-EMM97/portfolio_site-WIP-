@@ -1,5 +1,7 @@
 @import "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap";
 
+// Must change margins and paddings to rem!
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -23,6 +25,12 @@ li {
   margin: 0;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -31,10 +39,11 @@ h1 {
 .content {
   max-width: 1060px !important;
   margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 25px;
   padding-right: 25px;
   text-align: left;
-  width: 100%;
   flex: 1 0 auto;
 }
 
@@ -43,59 +52,18 @@ h1 {
   width: 100%;
   left: 50%;
   bottom: 40px;
-  height: 20px;
+  min-height: 1.125rem;
   font-size: 3rem;
   z-index: 1;
   cursor: pointer;
   color: green;
 }
 
-.section {
-  display: flex;
-  justify-content: center;
-
-  .section__title {
-    flex-shrink: 0;
-    width: 200px;
-    margin-right: 70px;
-    text-align: right;
-    font-weight: 700;
-    letter-spacing: 2px
-  }
-
-  .section__content {
-    width: 100%;
-    max-width: 650px;
-    font-size: 1rem;
-  }
-  
-
-  .skills {
-    height: 25vh;
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-    .skills__type--header {
-      padding-top: 10px;
-      font-weight: 700;
-    }
-  }
-
-  .position {
-    padding-right: 1.5rem;
-  }
-
-  .place-time {
-    display: flex;
-    justify-content: space-between;
-  }
-
-}
 
 .intro {
   font-size: 2.5rem; 
   max-width: 1440px;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -121,17 +89,85 @@ h1 {
   }
 }
 
-.xp {
-  height: 40rem;
-  a {
-    color:inherit;
-    font-size: 18px;
+.section {
+  display: flex;
+  justify-content: center;
+
+  .section__title {
+    flex-shrink: 0;
+    width: 200px;
+    margin-right: 70px;
+    text-align: right;
     font-weight: 700;
+    letter-spacing: 2px
   }
-  .xp__content {
-    padding-top: 10px;
+
+  .section__content {
+    width: 100%;
+    max-width: 650px;
+    font-size: 1rem;
   }
+  
+  // Skills
+
+  .skills {
+    min-height: 25vh;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.125rem;
+    .skills__type--header {
+      padding-top: 10px;
+      font-weight: 700;
+    }
+  }
+
+  .position {
+    padding-right: 1.5rem;
+  }
+
+  .place-time {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // Experience 
+
+  &.xp {
+    min-height: 40rem;
+    a {
+      color:inherit;
+      font-size: 1.125rem;
+      font-weight: 700;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .xp__content {
+      padding-top: 10px;
+    }
+  }
+
+  // Blogs
+  &.blogs{
+    .blogs__posts{
+      display: flex;
+      flex-wrap: wrap;
+      
+      > li {
+        width: 300px;
+        a:hover {
+          text-decoration: underline;
+        }
+        h2 {
+          font-size: 25px;
+          margin-top: .313rem;
+        }
+      }
+    }
+  }
+
 }
+
 
 .emailStyle {
   line-height: 14px;
@@ -150,21 +186,13 @@ h1 {
   color: #fff;
 }
 
-footer {
-  display: flex;
-  max-width: 1060px;
-  width: 100%;
-  margin: 0 auto;
-  padding-bottom: 20px;
-}
-
 @media only screen and (max-width: 1024px) {
   .intro {
     padding: 140px;
   }
 
   .xp {
-    height: 60vh;
+    min-height: 60vh;
   }
 
   .section__content {
@@ -173,31 +201,25 @@ footer {
     }
 
     .skills {
-      height: 35vh;
+      min-height: 35vh;
       flex-wrap: wrap;
     }
-  }
-
-
-  footer {
-    padding-left: 25px;
-    padding-right: 25px;
   }
 }
 
 @media only screen and (max-width: 896px) {
   .intro {
     padding:120px;
-    height: 65rem;
+    min-height: 65rem;
   }
 
   .xp {
-    height:40rem
+    min-height:40rem
   }
 
   .section__content {
     .skills {
-      height: 20rem;
+      min-height: 20rem;
       padding-right: 30px;
     }
   }
@@ -239,7 +261,7 @@ footer {
   }
 
   .xp {
-    height: 60vh;
+    min-height: 60vh;
   }
 
   .section {
@@ -257,7 +279,7 @@ footer {
       margin-right: 20px;
     }
     .skills {
-      height: 20rem;
+      min-height: 20rem;
       flex-wrap: wrap;
 
       .skills__type--header {
@@ -281,11 +303,11 @@ footer {
 
 @media only screen and (max-width: 667px) {
   .xp {
-    height: 50rem;
+    min-height: 50rem;
   }
   .section {
     .skills {
-      height: 35rem;
+      min-height: 35rem;
       flex-wrap: wrap;
 
       .skills__type--header {
@@ -305,7 +327,7 @@ footer {
   }
 
   .xp {
-    height:60rem
+    min-height:60rem
   }
 
   .section {
@@ -314,7 +336,7 @@ footer {
     }
 
     .skills {
-      height: 40rem;
+      min-height: 40rem;
       padding-right: 30px;
     }
 
@@ -342,7 +364,7 @@ footer {
     }
 
     .skills {
-      height: 60rem;
+      min-height: 60rem;
       padding-right: 60px;
     }
 

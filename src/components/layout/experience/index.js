@@ -1,7 +1,8 @@
-import React from "react"
-import JobData from "../../content/jobs.json"
-import Fade from "react-reveal/Fade"
-import  "./layout/layout.scss"
+import React from 'react'
+import JobData from '../../../../content/jobs.json'
+import Fade from 'react-reveal/Fade'
+import '../layout.scss';
+import Particles from '../particles'
 
 const Experience = () => {
   return (
@@ -18,7 +19,7 @@ const Experience = () => {
                 <div className="job">
                   <div className="place-time">
                     <div><p>
-                      <a href={data.url} target="_blank" rel="noreferrer">
+                    <a href={data.url} target="_blank" rel="noreferrer" style={{ fontWeight: 'bold' }}>
                         {data.company}
                       </a>
                     </p></div>

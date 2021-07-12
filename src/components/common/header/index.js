@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
-import Toggle from '../toggle/index'
-import '../layout.scss'
+import Toggle from '../../layout/toggle/index'
+import Button from '../button'
+import '../../layout/layout.scss'
 
 const MenuIcon = styled.button`
   position: absolute;
@@ -71,12 +72,12 @@ const MenuLinks = styled.nav`
       color: #546456
     }
   }
-`
+  `
 
-const NavMenu = ({ navProps }) => {
+const Header = ({ navProps }) => {
   const [nav, showNav] = useState(false)
   return (
-    <header>
+    <>
       <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
         <div className="menu-icon" />
         <div className="menu-icon" />
@@ -89,11 +90,12 @@ const NavMenu = ({ navProps }) => {
             <li><Link to='/blog/'>Blog</Link></li>
             <li><Link to='/projects/'>Projects</Link></li>
           </ul>
-        </MenuLinks>
-
-      <Toggle/>
-    </header>
+      </MenuLinks>
+<Toggle/>
+      
+      {/* <Button children={`Contact me!`} linkTo={`email`} buttonStyle={`btn--checkBlog`} buttonSize={`btn--x--small`}/> */}
+    </>
   )
 }
 
-export default NavMenu
+export default Header;
