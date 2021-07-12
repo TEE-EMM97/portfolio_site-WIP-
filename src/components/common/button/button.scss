@@ -1,0 +1,159 @@
+  :root {
+    --primary: #4628ff;
+  }
+
+  // .btn {
+  //   font-family: "Nunito", sans-serif;
+  //   font-weight: 500;
+  //   border-radius: 30px;
+  //   cursor: pointer;
+  //   transition: transform 0.3s ease;
+  //   outline: none;
+  //   border: 0;
+
+  //   &--primary--solid {
+  //     background-color: var(--primary);
+  //     border: none;
+  //     color: var(--white);
+  //   }
+
+  //   &--medium {
+  //     padding: 10px 20px;
+  //     font-size: 18px;
+  //   }
+
+  //   &--large {
+  //     padding: 15px 30px;
+  //     font-size: 20px;
+  //   }
+  // }
+
+  a {
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  .btn {
+    font-family: "Nunito", sans-serif;
+    font-size: 500;
+    color: var(--white);
+    border: 0;
+    outline: none;
+    border-radius: 50px;
+    background: none;
+    padding: 0;
+    text-align: center;
+
+    &:hover {
+      color: #fff;
+      transition: all .3s ease-in-out;
+    }
+
+    &--x--small {
+      width: 160px;
+      height: 64px;
+      font-size: 14px;
+    }
+
+    &--small {
+      width: 180px; 
+      height: 68px;
+      font-size: 16px;
+    }
+
+    &--medium {
+      width: 220px;
+      height: 72px;
+      font-size: 18px;
+    }
+
+    &--large {
+      width: 280px;
+      height: 75px;
+      font-size: 20px;
+    }
+
+    &--goBackH,
+    &--goPrevBlog,
+    &--goNextBlog {
+      .button__bg {
+        display: none;
+      }
+    }
+
+    &--checkBlog {
+      // Start of Button Hover Styling.
+
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      justify-content: center;
+      mix-blend-mode: difference;
+
+      font-weight: 700;
+      text-transform: capitalize;
+      color: var(--white);
+      z-index: 100;
+
+      #text:hover {
+        color: aqua;
+      }
+
+      &:hover .button__bg {
+        transform: scale3d(1.2, 1.2, 1);
+      }
+
+      &:hover .button__bg::before {
+        transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+        transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+      }
+
+      &:hover .button__bg::after {
+        opacity: 1;
+        transition-duration: 0.01s;
+        transition-delay: 0.3s;
+      }
+
+      .button__bg {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: var(--primary);
+        border-radius: 50px;
+        overflow: hidden;
+        transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+        z-index: -1;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          background: #000;
+        }
+
+        &::before {
+          width: 110%;
+          height: 0;
+          padding-bottom: 110%;
+          top: 50%;
+          left: 50%;
+          border-radius: 50%;
+          transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 1);
+        }
+
+        &::after {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+      }
+    }
+  }

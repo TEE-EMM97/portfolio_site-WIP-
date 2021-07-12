@@ -9,6 +9,10 @@ const reducer = (state, action) => {
       return {
         isDark: !state.isDark,
       }
+    case "TOGGLE_NAV":
+      return {
+        isNavOpen: !state.isNavOpen,
+      }
     default: {
       return state
     }
@@ -21,6 +25,7 @@ const useGlobalState = () => {
     isDark: storage.getItem("isDark")
       ? JSON.parse(storage.getItem("isDark"))
       : false,
+    isNavOpen: false 
   })
 
   return { state, dispatch }

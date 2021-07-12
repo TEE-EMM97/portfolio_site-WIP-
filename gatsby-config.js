@@ -5,7 +5,7 @@ if (process.env.NODE_ENV !== 'production') {
   dotenv.config()
 }
 
-const { githubApiQuery } = require('./github-api')
+const { githubApiQuery } = require('./src/utils/github-api.js')
 
 module.exports = {
   siteMetadata: {
