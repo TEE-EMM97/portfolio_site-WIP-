@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
         `}
       />
       <div className="stick-foot">
-      <Particles />
+        <Particles/>
         <NavMenu />
         <div className="content">
           {children}

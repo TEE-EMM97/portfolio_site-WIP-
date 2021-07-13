@@ -45,7 +45,6 @@
     border-radius: 50px;
     background: none;
     padding: 0;
-    text-align: center;
 
     &:hover {
       color: #fff;
@@ -56,24 +55,28 @@
       width: 160px;
       height: 64px;
       font-size: 14px;
+      align-items: center;
     }
 
     &--small {
       width: 180px; 
       height: 68px;
       font-size: 16px;
+      align-items: center;
     }
 
     &--medium {
       width: 220px;
       height: 72px;
       font-size: 18px;
+      align-items: center;
     }
 
     &--large {
       width: 280px;
       height: 75px;
       font-size: 20px;
+      align-items: center;
     }
 
     &--goBackH,

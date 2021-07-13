@@ -13,7 +13,7 @@ const Particle = () => {
       <Particles
         style={{
           height: '100vh',
-          position: 'absolute',
+          position: 'fixed',
           top: 0,
           right: 0,
           left: 0,
