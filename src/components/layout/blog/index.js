@@ -1,14 +1,12 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import Fade from 'react-reveal/Fade'
-import '../layout.scss';
-import Particles from '../particles'
+import '../layout.scss'
 
-const Blog = () => {
-
+const Blog = ({pageContext}) => {
   const data = useStaticQuery(graphql`
   query {
-    allContentfulFakeBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulFakeBlogPost(sort: { fields: [publishDate], order: DESC }, limit:4) {
       edges {
         node {
           id
@@ -23,7 +21,8 @@ const Blog = () => {
           }
           blogBody {
               childMarkdownRemark {
-                excerpt(pruneLength: 150)
+                timeToRead
+                excerpt(pruneLength: 250)
           }
           }
       }
@@ -33,6 +32,7 @@ const Blog = () => {
   `);
   
   console.log('Blogs:', data)
+  console.log("Here", pageContext)
   return (
     <section className="section blogs">
       <Fade>
@@ -45,9 +45,9 @@ const Blog = () => {
           return (
             <li className="blogs__post" key={i}>
               <Link to={`/blog/${edge.node.slug}`}>
-                <h2>{edge.node.title}</h2>
+                <h5>{edge.node.title} <i className="bi-arrow-right" role="img" aria-label="arrow-right"/></h5>
+                <p>📆 {edge.node.publishDate} • ☕️ {edge.node.blogBody.childMarkdownRemark.timeToRead} MIN READ</p>
                 <p className="excerp">{edge.node.blogBody.childMarkdownRemark.excerpt}</p>
-                <p>{edge.node.publishDate}</p>
               </Link>
             </li>
           );

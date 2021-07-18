@@ -4,6 +4,23 @@ footer {
   width: 100%;
   margin: 0 auto;
   padding-bottom: 20px;
+  z-index: 2;
+
+  > .footer__socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items:flex-end;
+    margin-left: auto;
+    //Icon Styling
+    i {
+      font-size: 1.5rem;
+      opacity: .5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
 
   @media only screen and (max-width: 1024px) {
     footer {

@@ -1,8 +1,7 @@
 import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../../components/layout'
+import { graphql, Link } from 'gatsby';
+import Layout from '../../components/layout';
 import '../../components/layout/layout.scss';
-// import BlogHeader from '../../components/BlogHeader';
 
 export const query = graphql`
   query ($slug: String!) {
@@ -28,20 +27,31 @@ export const query = graphql`
   }
 `;
 
-
-const Post = ({ data }) => {
-  console.log(JSON.stringify(data));
+const Post = ({ data, pageContext }) => {
+  console.log(data);
+  console.log(pageContext);
+  const { next, prev } = pageContext;
   return (
     <Layout>
-    <div>
-      <h1>{data.contentfulFakeBlogPost.title}</h1>
-      <h1>{data.contentfulFakeBlogPost.publishDate}</h1>
-      <img src={data.contentfulFakeBlogPost.coverImages.fluid.base64} alt="for cover"/>
-      <div dangerouslySetInnerHTML={{ __html: data.contentfulFakeBlogPost.blogBody.childMarkdownRemark.html }} />
-    </div>
+      <div>
+        <h1>{data.contentfulFakeBlogPost.title}</h1>
+        <h1>{data.contentfulFakeBlogPost.publishDate}</h1>
+        <img
+          src={data.contentfulFakeBlogPost.coverImages.fluid.base64}
+          alt="for cover"
+        />
+        <div
+          dangerouslySetInnerHTML={{
+            __html:
+              data.contentfulFakeBlogPost.blogBody.childMarkdownRemark.html,
+          }}
+        />
+
+        {next && <Link to={`/blog/${next.slug}`}> Next </Link>}
+        {prev && <Link to={`/blog/${prev.slug}`}> Prev </Link>}
+      </div>
     </Layout>
   );
 };
 
 export default Post;
-

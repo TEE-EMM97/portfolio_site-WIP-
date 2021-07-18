@@ -1,6 +1,5 @@
 import React, {useContext} from 'react';
 import Particles from 'react-particles-js';
-import particleOptions from './particles.json';
 import Context from '../../../store/context'
 import { useTheme } from '@emotion/react'
 

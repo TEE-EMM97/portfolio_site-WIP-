@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import Toggle from '../../layout/toggle/index'
-import Button from '../button'
 import '../../layout/layout.scss'
 
 const MenuIcon = styled.button`
@@ -91,7 +90,6 @@ const Header = ({ navProps }) => {
             <li><Link to='/projects/'>Projects</Link></li>
           </ul>
       </MenuLinks>
-<Toggle/>
       
       {/* <Button children={`Contact me!`} linkTo={`email`} buttonStyle={`btn--checkBlog`} buttonSize={`btn--x--small`}/> */}
     </>

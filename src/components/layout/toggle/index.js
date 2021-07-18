@@ -1,10 +1,9 @@
-import PropTypes from 'prop-types'
 import React, { useContext } from 'react'
 import Context from '../../../store/context'
 import { useTheme } from '@emotion/react'
 import './toggle.scss'
 
-const Toggle = ({siteTitle}) => {
+const Toggle = () => {
   const { state, dispatch } = useContext(Context)
   const theme = useTheme()
   const stateChange = state.isDark ? theme.dark.font : theme.light.font;
@@ -29,13 +28,4 @@ const Toggle = ({siteTitle}) => {
       </div>
   )
 }
-
-Toggle.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Toggle.defaultProps = {
-  siteTitle: ``,
-}
-
 export default Toggle

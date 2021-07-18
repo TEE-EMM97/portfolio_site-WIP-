@@ -1,0 +1,25 @@
+  // Skills
+
+  .skills {
+    display: flex;
+    justify-content: space-between;
+
+    .skills__type--header {
+      padding-top: 10px;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: .5rem;
+      letter-spacing: 1px;
+    }
+  }
+
+  .position {
+    padding-right: 1.5rem;
+  }
+
+  .place-time {
+    display: flex;
+    justify-content: space-between;
+  }

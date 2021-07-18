@@ -4,6 +4,7 @@ import './footer.scss'
 
 const Footer = () => {
   let tempUrlForName = socialData.socialMedia[2].url;
+
   return (
     <footer>
       <div className="footer__copyright">
@@ -11,20 +12,17 @@ const Footer = () => {
           <span>Built with GatsbyJS by</span>
         </div>
         <div className="bottom">
-          <a href={tempUrlForName}>myself💘</a>
+          <a href={tempUrlForName}>@TM97<span role="img" aria-label="emoji-pink-heart-with-arrow-in-the-middle"> 💘</span></a>
           <span> {new Date().getFullYear()}</span>
-          <span role="img" aria-labelledby="rock-fingers">
-            🤘🏾
-          </span>
           &copy;
         </div>
       </div>
-      <div className="d-flex flex-row justify-content-end align-items-end ml-auto">
+      <div className="footer__socials">
         {socialData.socialMedia.map((data, index) => {
           return (
-            <li key={`${index}`} className="pl-3">
+            <li key={`${index}`} className="pl-4">
               <a href={data.url} target="_blank" rel="noreferrer">
-                {data.name}
+                <i className={`bi-${data.name}`} role="img" aria-label={data.name}/>
               </a>
             </li>
           );

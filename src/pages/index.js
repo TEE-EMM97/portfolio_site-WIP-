@@ -6,7 +6,7 @@ import Skills from '../components/layout/skills';
 import { useStaticQuery, graphql } from 'gatsby';
 import Seo from '../components/seo';
 import Blog from '../components/layout/blog';
-import Particles from '../components/layout/particles'
+import Projects from '../components/layout/projectSect';
 
 // markup
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
     }
   `);
 
-  const toDo = `addprojectsection improve design... twitterfeed... deliveryAPI...`;
+  const toDo = `improve design...`;
   return (
 
     <Layout>
@@ -29,7 +29,8 @@ const Home = () => {
         <Hello siteDescription={data.site.siteMetadata.description} />
         <Skills />
         <Experience />
-        <Blog/>
+      <Blog />
+      <Projects/>
       {/* <div><p><b>{toDo}</b></p></div> */}
     </Layout>
   );

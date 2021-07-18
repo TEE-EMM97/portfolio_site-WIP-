@@ -11,9 +11,6 @@
     },
     {
       "item": "SQL"
-    },
-    {
-      "item": "Swift"
     }
   ],
   "frameworks": [
@@ -27,11 +24,9 @@
       "item": "AngularJS"
     },
     {
-      "item": "Gatsby"
+      "item": "GatsbyJS"
     },
-    {
-      "item": "Ionic"
-    },
+    { "item": "NodeJS"},
     {
       "item": "React-Native"
     }

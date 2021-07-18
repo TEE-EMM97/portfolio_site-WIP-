@@ -2,7 +2,7 @@
 module.exports = {
   siteTitle: "@tm97",
   siteDescription:
-    "My name is Tev, I help developers, designers, and SME's bring their ideas to life; on time, and on budget. Powered by VS Code, Figma, and Supermalt. (I like stars too)",
+    "My name is Tev, I help developers, designers, and SME's bring their ideas to life; on time, and on budget. Powered by VS Code, Figma, and Supermalt.",
   siteKeywords:
     "tevon, tevon, tee-emm97, front-end engineer, web developer, javascript, northwest, manchester, ibethatlo",
   siteUrl: "https://tm97.com",
@@ -16,89 +16,16 @@ module.exports = {
   twitterHandle: "@ibethalo",
   socialMedia: [
     {
-      name: "GitHub",
+      name: "github",
       url: "https://github.com/tee-emm97",
     },
     {
-      name: "Instagram",
+      name: "instagram",
       url: "https://www.instagram.com/ibethatlo",
     },
     {
-      name: "Twitter",
+      name: "twitter",
       url: "https://twitter.com/ibethatlo",
     },
-  ],
-  skills: {
-  languages: [
-    {
-      "item": "HTML"
-    },
-    {
-      "item": "CSS/SCSS"
-    },
-    {
-      "item": "JavaScript"
-    },
-    {
-      "item": "SQL"
-    },
-    {
-      "item": "Swift"
-    }
-  ],
-    frameworks: [
-      {
-        "item": "ReactJS"
-      },
-      {
-        "item": "Bootstrap"
-      },
-      {
-        "item": "AngularJS"
-      },
-      {
-        "item": "Gatsby"
-      },
-      {
-        "item": "Ionic"
-      },
-      {
-        "item": "React-Native"
-      }
-    ],
-      tools: [
-        {
-          "item": "Bash"
-        },
-        {
-          "item": "Git & Github"
-        },
-        {
-          "item": "Gulp"
-        },
-        {
-          "item": "Chrome Devtools"
-        },
-        {
-          "item": "MongoDB"
-        },
-        {
-          "item": "Postico"
-        }
-      ],
-        design: [
-          {
-            "item": "SketchApp"
-          },
-          {
-            "item": "Figma"
-          },
-          {
-            "item": "Invision"
-          },
-          {
-            "item": "Wireframing"
-          }
-        ]
-  }
+  ]
 }

@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import Fade from 'react-reveal/Fade';
 import Button from '../../common/button';
-import '../layout.scss';
 import React from 'react';
+import '../layout.scss'
 
 const Hello = ({ siteDescription }) => {
   const variants = {
